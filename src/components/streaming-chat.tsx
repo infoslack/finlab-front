@@ -51,7 +51,7 @@ export function StreamingChat() {
 
   const handleLLMStream = async () => {
     try {
-      const response = await fetch('http://localhost:8000/rag', {
+      const response = await fetch('/api/rag', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -78,7 +78,7 @@ export function StreamingChat() {
   const handleAgentAnalysis = async () => {
     try {
       const startTime = Date.now();
-      const response = await fetch('http://localhost:8000/agent', {
+      const response = await fetch('/api/agent', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
